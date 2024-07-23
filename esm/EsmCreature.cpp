@@ -321,11 +321,11 @@ bool CEsmCreature::SetFieldValue (const int FieldID, const TCHAR* pString) {
  *=========================================================================*/
 void CEsmCreature::SetMoveType (const TCHAR* pString) {
 
-  if (stricmp(pString, _T("Walks")) == 0) SetWalks(true);
-  if (stricmp(pString, _T("Swims")) == 0) SetSwims(true);
-  if (stricmp(pString, _T("Flies")) == 0) SetFlies(true);
-  if (stricmp(pString, _T("Biped")) == 0) SetBipedal(true);
-  if (stricmp(pString, _T("None")) == 0) SetNone(true);
+  if (_stricmp(pString, _T("Walks")) == 0) SetWalks(true);
+  if (_stricmp(pString, _T("Swims")) == 0) SetSwims(true);
+  if (_stricmp(pString, _T("Flies")) == 0) SetFlies(true);
+  if (_stricmp(pString, _T("Biped")) == 0) SetBipedal(true);
+  if (_stricmp(pString, _T("None")) == 0) SetNone(true);
  }
 /*===========================================================================
  *		End of Class Method TCHAR* CEsmCreature::SetMoveType()
@@ -374,7 +374,7 @@ int GetESMCreatureType (const TCHAR *pString) {
   int Index;
 
   for (Index = MWESM_CREATYPE_MIN; Index <= MWESM_CREATYPE_MAX; Index++) {
-    if (stricmp(pString, l_CreatureTypes[Index]) == 0) return (Index);
+    if (_stricmp(pString, l_CreatureTypes[Index]) == 0) return (Index);
    }
 
   return (-1);

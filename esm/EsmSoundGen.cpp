@@ -290,7 +290,7 @@ int GetESMSoundGenType (const TCHAR* pString) {
   int Index;
 
   for (Index = MWESM_SNDGEN_MIN; Index <= MWESM_SNDGEN_MAX; Index++) {
-    if (stricmp(pString, l_SoundGenTypes[Index]) == 0) return (Index);
+    if (_stricmp(pString, l_SoundGenTypes[Index]) == 0) return (Index);
    }
 
   return (-1);

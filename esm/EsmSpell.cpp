@@ -278,7 +278,7 @@ int GetESMSpellType (const TCHAR* pString) {
   int Index;
 
   for (Index = MWESM_SPELLTYPE_MIN; Index <= MWESM_SPELLTYPE_MAX; Index++) {
-    if (stricmp(pString, l_SpellTypes[Index]) == 0) return (Index);
+    if (_stricmp(pString, l_SpellTypes[Index]) == 0) return (Index);
    }
   
   return (-1);

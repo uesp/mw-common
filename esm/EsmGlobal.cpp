@@ -197,9 +197,9 @@ const TCHAR* CEsmGlobal::GetTypeString (void) {
 
 
 int CEsmGlobal::GetTypeID (const TCHAR* pString) {
-  if (stricmp(pString, _T("float")) == 0) return (MWESM_GLOBAL_FLOAT);
-  if (stricmp(pString, _T("long"))  == 0) return (MWESM_GLOBAL_LONG);
-  if (stricmp(pString, _T("short")) == 0) return (MWESM_GLOBAL_SHORT);
+  if (_stricmp(pString, _T("float")) == 0) return (MWESM_GLOBAL_FLOAT);
+  if (_stricmp(pString, _T("long"))  == 0) return (MWESM_GLOBAL_LONG);
+  if (_stricmp(pString, _T("short")) == 0) return (MWESM_GLOBAL_SHORT);
   return (MWESM_GLOBAL_FLOAT);
  }
 /*===========================================================================

@@ -9,7 +9,7 @@
  *=========================================================================*/
 
 	/* Include Files */
-#include "common/utility/profile.h"
+#include "utility/profile.h"
 
 
 /*===========================================================================
@@ -17,7 +17,7 @@
  * Begin Local Variable Definitions
  *
  *=========================================================================*/
-  DEFINE_FILE();
+  DEFINE_FILE("Profile.Cpp");
 
 
 	/* Only open log file in debug builds */

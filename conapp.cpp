@@ -514,7 +514,7 @@ bool CConsoleApp::PrintLine (const char* pString, ...) {
 	/* Check for a paging condition */
   if (DoPaging && (OutputLineCount % LinesPerPage) == 0) {
     Result = fprintf (pOutputStream, "Press any key to continue...\n");
-    int InputChar = getch();
+    int InputChar = _getch();
     //getch();
     if (Result >= 0) Result = fprintf (pOutputStream, "\n");
 

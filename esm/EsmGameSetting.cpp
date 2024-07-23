@@ -189,9 +189,9 @@ const TCHAR* CEsmGameSetting::GetTypeString (void) {
  }
 
 int CEsmGameSetting::GetType (const TCHAR* pString) {
-  if (stricmp(pString, _T("Integer")) == 0) return (MWESM_SETTING_INTEGER);
-  if (stricmp(pString, _T("Float"))   == 0) return (MWESM_SETTING_FLOAT);
-  if (stricmp(pString, _T("String"))  == 0) return (MWESM_SETTING_STRING);
+  if (_stricmp(pString, _T("Integer")) == 0) return (MWESM_SETTING_INTEGER);
+  if (_stricmp(pString, _T("Float"))   == 0) return (MWESM_SETTING_FLOAT);
+  if (_stricmp(pString, _T("String"))  == 0) return (MWESM_SETTING_STRING);
   return (MWESM_SETTING_INTEGER);
  }
 

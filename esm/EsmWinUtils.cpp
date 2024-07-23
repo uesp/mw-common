@@ -11,7 +11,7 @@
 	/* Include Files */
 #include "stdafx.h"
 #include "esmwinutils.h"
-#include "WinUtil.h"
+#include "Windows\WinUtil.h"
 
 
 /*===========================================================================

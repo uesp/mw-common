@@ -737,9 +737,9 @@ void Test_IsFileWriteable (void) {
   ASSERT(IsFileWriteable(_T("c:\\temp")) == FALSE);
   ASSERT(IsFileWriteable(_T("t1.2. \\34.txt")) == FALSE);
   Test_CreateRandomFile(_T("c:\\temp\\test1.dat"), 10);
-  chmod(("c:\\temp\\test1.dat"), S_IREAD);
+  _chmod(("c:\\temp\\test1.dat"), S_IREAD);
   ASSERT(IsFileWriteable(_T("c:\\temp\\test1.dat")) == FALSE);
-  chmod(("c:\\temp\\test1.dat"), S_IWRITE | S_IREAD);
+  _chmod(("c:\\temp\\test1.dat"), S_IWRITE | S_IREAD);
 
 	/* Test empty string */
   ASSERT(IsFileWriteable(_T("")) == FALSE);

@@ -123,7 +123,7 @@ CConfigEntry* CConfigGroup::FindEntry (const TCHAR* pVariable) {
   for (Index = 0; Index < m_Entries.GetSize(); Index++) { 
     pEntry = (CConfigEntry *) m_Entries.GetAt(Index);
 
-    Result = stricmp(pVariable, pEntry->GetVariable());
+    Result = _stricmp(pVariable, pEntry->GetVariable());
     if (Result == 0) return (pEntry);
    }
 
@@ -366,11 +366,11 @@ CConfigGroup* CConfigFile::FindGroup (const TCHAR* pName) {
     pGroup = (CConfigGroup *) m_Groups.GetAt(Index);
 
     if (*pName == '[') 
-      Result = stricmp(pName, pGroup->GetName());
+      Result = _stricmp(pName, pGroup->GetName());
     else if (NameLength == 0 && (pGroup->GetName())[1] == ']')
       Result = 0;
     else
-      Result = strnicmp(pName, (pGroup->GetName())+1, NameLength);
+      Result = _strnicmp(pName, (pGroup->GetName())+1, NameLength);
 
     if (Result == 0) return (pGroup);
    }

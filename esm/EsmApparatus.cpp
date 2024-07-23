@@ -256,7 +256,7 @@ int GetESMAppaType (const TCHAR* pString) {
   int Index;
 
   for (Index = MWESM_APPATYPE_MIN; Index <= MWESM_APPATYPE_MAX; Index++) {
-    if (stricmp(l_ApparatusTypes[Index], pString) == 0) return (Index);
+    if (_stricmp(l_ApparatusTypes[Index], pString) == 0) return (Index);
    }
 
 	/* Return the apparatus type string from the name array */

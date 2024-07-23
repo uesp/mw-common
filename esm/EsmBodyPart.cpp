@@ -303,7 +303,7 @@ int GetESMBodyPart (const TCHAR* pString) {
   int Index;
 
   for (Index = MWESM_PART_MIN; Index <= MWESM_PART_MAX; Index++) {
-    if (stricmp(l_BodyParts[Index], pString) == 0) return (Index);
+    if (_stricmp(l_BodyParts[Index], pString) == 0) return (Index);
    }
 
   return (-1);
@@ -331,7 +331,7 @@ int GetESMBodyPartType (const TCHAR* pString) {
   int Index;
 
   for (Index = MWESM_PARTTYPE_MIN; Index <= MWESM_PARTTYPE_MAX; Index++) {
-    if (stricmp(l_BodyPartTypes[Index], pString) == 0) return (Index);
+    if (_stricmp(l_BodyPartTypes[Index], pString) == 0) return (Index);
    }
 
   return (-1);

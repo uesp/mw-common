@@ -400,7 +400,7 @@ bool CEsmFile::Read (const TCHAR* pFilename) {
  *=========================================================================*/
 bool CEsmFile::Write (const TCHAR* pFilename) {
   CEsmTES3*	pHeader;
-  headerdata_t* pHeaderData;
+  headerdata_t* pHeaderData = nullptr;
   CGenFile	File;
   TCHAR		Buffer[256];
   int		Index;
